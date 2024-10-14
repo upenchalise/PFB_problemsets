@@ -1,0 +1,8 @@
+  254  vi oops2
+  255  git add oops2
+  256  git commit -m 'madness'
+  257  git push
+  258  rm oops2
+  259  git add oops2
+  260  git commit -m 'removing oops2'
+  261  git push
