@@ -30,10 +30,18 @@ for thing in fav_thing:
 
 
 #question number 8
-print(fav_thing)
-thing = input()
+for thing in fav_thing:
+    print(thing)
+
+thing = input('Check the above keys')
 print(Dict[thing])
 
 #question number 9
 fav_thing['Organism'] = 'Unicorn'
 print(fav_thing)
+
+#question number 9
+thing1=input()
+fav_thing['Organism'] = thing1
+print(fav_thing)
+print(fav_thing['Organism'])
