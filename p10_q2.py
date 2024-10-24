@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 #question number 2
-def dna_nt60(dna, n):
+def dna_ntwspaces(dna, n):
     dna = dna.replace("\n", "")
     new_dna = [(dna[i:i+n]) for i in range(0, len(dna), n)] #list comprehension it is giving a list of nts every nth character 
     new_dna_out="\n".join(new_dna) # joins the list with a new line on the item
@@ -14,6 +14,6 @@ TCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAA
 TGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATG
 CCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCT
 GTCATCTTCT'''
-new_dna = dna_nt60(dna, 60)
+new_dna = dna_ntwspaces(dna, 60)
 print(f'This is the new dna output split at every 60 nucleotides: \n{new_dna}')
 print(repr(new_dna))

@@ -2,12 +2,14 @@
 import re
 
 #question number 1
-def dna_nt60(dna, n):
-    new_dna = [(dna[i:i+n]) for i in range(0, len(dna), n)]
-    new_dna_out="\n".join(new_dna)
+def dna_nt60(dna):
+    new_dna = [(dna[i:i+60]) for i in range(0, len(dna), 60)] #list comprehension it is giving a list of nts every nth character
+    new_dna_out="\n".join(new_dna) # joins the list with a new line on the item
     return new_dna_out
 
 dna = 'GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCT'
-new_dna = dna_nt60(dna, 10)
+new_dna = dna_nt60(dna)
 print(f'This is the new dna output split at every 60 nucleotides: \n{new_dna}')
 print(repr(new_dna))
+
+# print(dna.split())

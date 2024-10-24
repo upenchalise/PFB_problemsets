@@ -26,10 +26,14 @@ for match in re.finditer(r"(\^(\w+)\^)", restriction_site):
     print(len(cut_sites))
     print(match.group(2))
 
+#question number 8
 lengths = [len(item) for item in cut_sites]
 print(lengths)
+
 sorted_cut_sites = sorted(cut_sites,key=len)
 print(sorted_cut_sites)
+
+#other way to do question number 7 b or 8, nothing makes sense anymore
 cutsites = re.findall(r"\^(\w+)\^" , restriction_site)
 print(cutsites)
 

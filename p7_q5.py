@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 import re
 
-#question number 5
+#question number 5 WORKED MAGICALLY IN THE FIRST TRY
 gene_dict = {}
 sequence = ""
 with open("Python_07.fasta.txt",  'r') as Python_07_fasta:
@@ -14,6 +14,7 @@ with open("Python_07.fasta.txt",  'r') as Python_07_fasta:
             geneID = gene_found.group(1)
             #print(seqName)
             gene_dict[geneID] = ""
+            sequence = ""
         if seq_found:
             sequence += line
             #print(description)

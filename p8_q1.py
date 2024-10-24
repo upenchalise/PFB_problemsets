@@ -21,8 +21,7 @@ with open("Python_08.fasta.txt", 'r') as P8fasta_obj:
             gene_dict[geneID][len] = count
             gene_dict[geneID][path] = loc
             gene_dict[geneID][seq] = ""
-            gene_dict[geneID]["nt_count"] = {"A": 0, "T": 0, "C": 0, "G": 0}
-            
+            gene_dict[geneID]["nt_count"] = {"A": 0, "T": 0, "C": 0, "G": 0} 
         else:
             gene_dict[geneID][seq] += line
             # A = seq.count("A")
